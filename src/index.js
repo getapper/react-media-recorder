@@ -166,7 +166,7 @@ export default class ReactMediaRecorder extends React.Component {
     if (this.props.whenStopped) {
       this.props.whenStopped(url);
     }
-    this.setState({ mediaBlob: url, status: "stopped" });
+    this.setState({ mediaBlob: blob, mediaUrl: url, status: "stopped" });
   };
 
   onRecordingActive = ({ data }) => {
@@ -192,7 +192,7 @@ export default class ReactMediaRecorder extends React.Component {
     }
     this.mediaRecorder = this.initMediaRecorder(this.stream);
     this.chunks = [];
-    this.setState({ mediaBlob: null });
+    this.setState({ mediaBlob: null, mediaUrl: null });
     setTimeout(() => {
       this.mediaRecorder.start();
       this.setState({ status: "recording" });
@@ -232,6 +232,7 @@ export default class ReactMediaRecorder extends React.Component {
       resumeRecording: this.resumeRecording,
       muteAudio: () => this.muteAudio(true),
       unmuteAudio: () => this.muteAudio(false),
-      mediaBlob: this.state.mediaBlob
+      mediaBlob: this.state.mediaBlob,
+      mediaUrl: this.state.mediaUrl,
     });
 }

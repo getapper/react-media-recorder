@@ -1,5 +1,5 @@
 {
-  "name": "react-media-recorder",
+  "name": "@getapper/react-media-recorder",
   "version": "0.7.2",
   "description": "A React component based on MediaRecorder() API to record audio/video streams",
   "main": "index.js",
@@ -12,9 +12,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/giridharangm/react-media-recorder.git"
+    "url": "git+https://github.com/getapper/react-media-recorder.git"
   },
   "keywords": [
+    "getapper",
     "react",
     "recorder",
     "audio recorder",
@@ -24,9 +25,9 @@
   "author": "Giridharan GM",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/giridharangm/react-media-recorder/issues"
+    "url": "https://github.com/getapper/react-media-recorder/issues"
   },
-  "homepage": "https://github.com/giridharangm/react-media-recorder#readme",
+  "homepage": "https://github.com/getapper/react-media-recorder#readme",
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",

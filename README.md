@@ -17,18 +17,18 @@ yarn add react-media-recorder
 ## Usage
 
 ```javascript
-import ReactMediaRecorder from "react-media-recorder";
+import ReactMediaRecorder from "@getapper/react-media-recorder";
 
 const RecordView = () => (
   <div>
     <ReactMediaRecorder
       video
-      render={({ status, startRecording, stopRecording, mediaBlob }) => (
+      render={({ status, startRecording, stopRecording, mediaBlob, mediaUrl }) => (
         <div>
           <p>{status}</p>
           <button onClick={startRecording}>Start Recording</button>
           <button onClick={stopRecording}>Stop Recording</button>
-          <video src={mediaBlob} controls />
+          <video src={mediaUrl} controls />
         </div>
       )}
     />
@@ -36,7 +36,7 @@ const RecordView = () => (
 );
 ```
 
-Since `react-media-recording` uses render prop, you can define what to render in the view. Just don't forget to wire the `startRecording`, `stopRecording` and `mediaBlob` to your component.
+Since `react-media-recording` uses render prop, you can define what to render in the view. Just don't forget to wire the `startRecording`, `stopRecording` and `mediaUrl` to your component.
 
 ### Props available in the `render` function
 
@@ -83,6 +83,10 @@ A `function`, which mutes the audio tracks when invoked.
 A `function` which unmutes the audio tracks when invoked.
 
 #### mediaBlob
+
+A `blob` object that can be converted in a buffer and uploaded to a server.
+
+#### mediaUrl
 
 A `blob` url that can be wired to an `<audio />`, `<video />` or an `<a />` element.
 
@@ -137,7 +141,7 @@ default: `false`
 
 #### render
 
-A `function` which accepts an object containing fields: `status`, `startRecording`, `stopRecording` and`mediaBlob`. This function would return a react element/component.
+A `function` which accepts an object containing fields: `status`, `startRecording`, `stopRecording`, `mediaUrl` and `mediaBlob`. This function would return a react element/component.
 
 type: `function`  
 default: `() => null`
