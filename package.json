@@ -1,6 +1,6 @@
 {
   "name": "@getapper/react-media-recorder",
-  "version": "0.7.2",
+  "version": "0.7.3",
   "description": "A React component based on MediaRecorder() API to record audio/video streams",
   "main": "index.js",
   "scripts": {
