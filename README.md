@@ -1,6 +1,6 @@
-# react-media-recorder :o2: :video_camera: :microphone:
+# @getapper/react-media-recorder :o2: :video_camera: :microphone:
 
-`react-media-recorder` is a react component with render prop that can be used to record audio/video streams using [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) API.
+`@getapper/react-media-recorder` is a react component with render prop that can be used to record audio/video streams using [MediaRecorder](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder) API.
 
 ## Installation
 
