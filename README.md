@@ -5,13 +5,13 @@
 ## Installation
 
 ```
-npm i -S react-media-recorder  
+npm i -S @getapper/react-media-recorder  
 ```
 
 or
 
 ```
-yarn add react-media-recorder  
+yarn add @getapper/react-media-recorder  
 ```
 
 ## Usage
