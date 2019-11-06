@@ -164,7 +164,7 @@ export default class ReactMediaRecorder extends React.Component {
     const blob = new Blob(this.chunks, this.blobPropertyBag);
     const url = URL.createObjectURL(blob);
     if (this.props.whenStopped) {
-      this.props.whenStopped(url);
+      this.props.whenStopped(blob, url);
     }
     this.setState({ mediaBlob: blob, mediaUrl: url, status: "stopped" });
   };
